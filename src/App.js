@@ -6,7 +6,7 @@ import Home from './Home';
 import Slideshow from './components/Slideshow';
 import Popup from './components/Popup';
 import Player from './components/Player';
-
+// detta är en testkommentar
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
