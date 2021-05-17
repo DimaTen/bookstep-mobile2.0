@@ -4,7 +4,6 @@ import { useAuth } from '../contexts/AuthContext';
 import Signup from './Signup';
 import { useHistory, Link } from 'react-router-dom';
 import Button from './Button';
-import Popup from './Popup';
 import { Popup as ReactPopup } from 'reactjs-popup';
 
 export default function Login({ setTrigger }) {
