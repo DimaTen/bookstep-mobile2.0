@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import Popup from './Popup';
 import Home from '../Home';
 import Books from './Books';
 import Profile from './Profile';
 import Player from './Player';
-import Sidemenu from './Sidemenu';
-import {
-  Route,
-  Switch,
-  BrowserRouter as Router,
-  useHistory,
-} from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
 export default function MainContent() {
   const { currentUser, logout } = useAuth();
@@ -46,5 +39,5 @@ export default function MainContent() {
 }
 
 export function notAuthorized() {
-  return <div>Not authorized</div>;
+  return <div>Logga in för att se detta</div>;
 }
