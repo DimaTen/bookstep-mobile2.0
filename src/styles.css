@@ -171,7 +171,16 @@ h4 {
   line-height: 30px;
   letter-spacing: 0.085em;
 }
-
+/*skapat denna css för h6*/
+h6 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  /*vad har ordinarie h6 för fontzise? verkar vara 0.67em-vad betyder det?*/
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.005em;
+}
 .heading {
   display: flex;
   flex-direction: column;
@@ -186,7 +195,7 @@ h4 {
 
 .login-window-wrapper {
   display: flex;
-  width: 60%;
+  width: 100%;
   height: auto;
   background-color: white;
   align-items: center;

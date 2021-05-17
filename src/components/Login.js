@@ -35,10 +35,11 @@ export default function Login({ setTrigger }) {
   }
 
   return (
-    <div class="login-window-wrapper">
-      <div class="login-window">
+    <div className="login-window-wrapper">
+      <div className="login-window">
         {error && <Alert variant="danger">{error}</Alert>}
-        <h3>Logga in</h3>
+        {/* ändrat nedan till h4 enl figma */}
+        <h4>Logga in</h4>
         <div className="close-button">
           <i
             className="ri-close-line ri-3x"
