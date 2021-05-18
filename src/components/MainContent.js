@@ -19,21 +19,19 @@ export default function MainContent() {
 
   if (currentUser) {
     return (
-      <main className="content">
+      <>
         <Route path="/Player" exact component={Player} />
         <Route path="/Profile" exact component={Profile} />
         <Route path="/Books" exact component={Books} />
         <Route path="/" exact component={Home} />
-      </main>
+      </>
     );
   } else {
     return (
-      <main className="content">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route to="/" component={notAuthorized} />
-        </Switch>
-      </main>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route to="/" component={notAuthorized} />
+      </Switch>
     );
   }
 }

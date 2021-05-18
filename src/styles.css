@@ -92,15 +92,6 @@ a:visited {
 
 /* SlideShow */
 
-.slideshow {
-  grid-column: 1/7;
-  margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  position: relative;
-}
-
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
@@ -154,6 +145,7 @@ a:visited {
 
 .container-fluid {
   height: 100%;
+  width: 100%;
 }
 
 .content {
@@ -192,4 +184,44 @@ h4 {
   align-items: center;
   justify-content: center;
   align-self: center;
+}
+
+.book-wrapper {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  grid-template-columns: repeat(6, 1fr);
+  height: 83vh;
+}
+
+.bookList-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+}
+
+.bookList-wrapper .card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bookList-wrapper .cards-left {
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.bookList-wrapper .cards-right {
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }

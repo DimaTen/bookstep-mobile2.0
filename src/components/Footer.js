@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Footer() {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(3);
+
+  useEffect(() => {
+    setIndex(3);
+  }, []);
 
   const Footer = styled.footer`
     position: fixed;

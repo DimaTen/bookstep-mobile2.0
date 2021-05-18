@@ -35,8 +35,8 @@ export default function Login({ setTrigger }) {
   }
 
   return (
-    <div class="login-window-wrapper">
-      <div class="login-window">
+    <div className="login-window-wrapper">
+      <div className="login-window">
         {error && <Alert variant="danger">{error}</Alert>}
         <h3>Logga in</h3>
         <div className="close-button">
