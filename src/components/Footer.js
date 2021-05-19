@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Footer() {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(3);
+
+  useEffect(() => {
+    setIndex(3);
+  }, []);
 
   const Footer = styled.footer`
     position: fixed;
@@ -35,10 +39,10 @@ export default function Footer() {
   `;
 
   const classNames = ['ri-headphone-fill', 'ri-file-mark-fill', 'ri-run-fill'];
-  const links = ['/Player', '/Books', '/Profile'];
+  const links = ['/AudioPlayer', '/Books', '/Profile'];
 
   return (
-    <Footer className="footer">
+    <Footer>
       <div className="footer-icons">
         {classNames.map((_, idx) => (
           <Link to={`${links[idx]}`}>

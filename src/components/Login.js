@@ -13,6 +13,7 @@ export default function Login({ setTrigger }) {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const [openReady, setOpenReady] = useState(false);
 
   const handleClose = () => {
     setTrigger(false);
@@ -27,6 +28,7 @@ export default function Login({ setTrigger }) {
       await login(emailRef.current.value, passwordRef.current.value);
       setError('Välkommen!');
       handleClose();
+      history.push('/');
     } catch {
       // ReactPopup.alert('E-post och lösenord matchar inte');
       setError('E-post och lösenord matchar inte');
@@ -35,8 +37,8 @@ export default function Login({ setTrigger }) {
   }
 
   return (
-    <div class="login-window-wrapper">
-      <div class="login-window">
+    <div className="login-window-wrapper">
+      <div className="login-window">
         {error && <Alert variant="danger">{error}</Alert>}
         <h3>Logga in</h3>
         <div className="close-button">
