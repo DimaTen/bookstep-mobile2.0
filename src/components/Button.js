@@ -1,9 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
-import { withRouter } from 'react-router';
 import styled from 'styled-components';
 
-export default function Button({ children, color, bgColor, onClick }) {
+export default function Button({ children, color, bgColor, onClick, type }) {
   const Button = styled.button`
     padding-left: 3em;
     padding-right: 3em;
@@ -11,9 +9,9 @@ export default function Button({ children, color, bgColor, onClick }) {
     border-radius: 15px;
     margin: 1vw;
   `;
-
   return (
     <Button
+      className={type}
       onClick={onClick}
       style={{ color: color, backgroundColor: bgColor }}
     >

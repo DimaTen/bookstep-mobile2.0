@@ -39,10 +39,10 @@ export default function Footer() {
   `;
 
   const classNames = ['ri-headphone-fill', 'ri-file-mark-fill', 'ri-run-fill'];
-  const links = ['/Player', '/Books', '/Profile'];
+  const links = ['/AudioPlayer', '/Books', '/Profile'];
 
   return (
-    <Footer className="footer">
+    <Footer>
       <div className="footer-icons">
         {classNames.map((_, idx) => (
           <Link to={`${links[idx]}`}>

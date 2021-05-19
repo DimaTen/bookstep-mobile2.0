@@ -3,10 +3,12 @@ import Button from './components/Button';
 import Slideshow from './components/Slideshow';
 import Popup from './components/Popup';
 import Signup from './components/Signup';
+import { useAuth } from './contexts/AuthContext';
 
-export default function Home() {
+export default function HomeNotSignedIn() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
+  const { currentUser } = useAuth();
 
   const handleLogin = () => {
     if (isLoggedIn) {
@@ -15,6 +17,7 @@ export default function Home() {
       setButtonPopup(true);
     }
   };
+
   return (
     <>
       <Slideshow />
