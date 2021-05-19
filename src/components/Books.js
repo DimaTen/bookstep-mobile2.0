@@ -17,47 +17,49 @@ export default function Books() {
   if (books) {
     return (
       <div className="book-wrapper">
-        <header>
-          <h4>Senast tillagda</h4>
-        </header>
-        <div class="bookList-wrapper">
-          <div class="cards-left">
-            <Card>
-              <Card.Img variant="top" src="bookCoverCake.svg" />
-              <Card.Body>
-                <Card.Title>Boktitel</Card.Title>
-                <Button>Klicka</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src="bookCoverCake.svg" />
-              <Card.Body>
-                <Card.Title>Boktitel</Card.Title>
-                <Button>Klicka</Button>
-              </Card.Body>
-            </Card>
+        <div className="bookContent-wrapper">
+          <header>
+            <h4>Senast tillagda</h4>
+          </header>
+          <div class="bookList-wrapper">
+            <div class="cards-left">
+              <Card>
+                <Card.Img variant="top" src="bookCoverCake.svg" />
+                <Card.Body>
+                  <Card.Title>Boktitel</Card.Title>
+                  <Button>Klicka</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Img variant="top" src="bookCoverCake.svg" />
+                <Card.Body>
+                  <Card.Title>Boktitel</Card.Title>
+                  <Button>Klicka</Button>
+                </Card.Body>
+              </Card>
+            </div>
+            <div class="cards-right">
+              <Card>
+                <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                <Card.Body>
+                  <Card.Title>Boktitel</Card.Title>
+                  <Button>Klicka</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                <Card.Body>
+                  <Card.Title>Boktitel</Card.Title>
+                  <Button>Klicka</Button>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
-          <div class="cards-right">
-            <Card>
-              <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
-              <Card.Body>
-                <Card.Title>Boktitel</Card.Title>
-                <Button>Klicka</Button>
-              </Card.Body>
-            </Card>
-            <Card>
-              <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
-              <Card.Body>
-                <Card.Title>Boktitel</Card.Title>
-                <Button>Klicka</Button>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-        {/* {books.map((book) => (
+          {/* {books.map((book) => (
           <li key={book.id}>{book.title}</li>
         ))} */}
-        <Button>Se alla 30 000 böcker</Button>
+          <Button>Se alla 30 000 böcker</Button>
+        </div>
       </div>
     );
   }

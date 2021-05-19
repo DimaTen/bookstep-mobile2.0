@@ -3,7 +3,6 @@ import './styles.css';
 import React, { useState } from 'react';
 import Sidemenu from './components/Sidemenu';
 import Popup from './components/Popup';
-import Player from './components/Player';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext';
