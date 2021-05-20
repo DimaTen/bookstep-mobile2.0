@@ -64,7 +64,7 @@ export default function Sidemenu({ setTrigger }) {
                 <li>{currentUser ? <h2>Logga ut</h2> : <h2>Logga in</h2>}</li>
               </Link>
               <Popup trigger={openLogin}>
-                <Login setTrigger={setOpenLogin} />
+                <Login setTrigger={setOpenLogin} setTrigger={setTrigger} />
               </Popup>
               <Link to="/Player" onClick={handleClose}>
                 <li>

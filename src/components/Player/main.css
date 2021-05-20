@@ -1,0 +1,459 @@
+* {
+  box-sizing: border-box;
+}
+
+.Player-box {
+  text-align: center;
+  width: auto;
+  height: 67vh;
+}
+.Player-body {
+  position: relative;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+.player-header {
+  width: auto;
+  text-align: center;
+  padding: 15px;
+}
+.player-controls-middle {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.Player-background {
+  position: absolute;
+  top: 15%;
+  z-index: -1;
+}
+
+
+
+.hide {
+  display: none;
+}
+
+.main {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.graphics img {
+  width: 100%;
+  height: 400px;
+  
+}
+
+.graphics {
+  border: 5px solid;
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(10px) contrast(120%) brightness(80%);
+
+}
+
+
+.chapterName {
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  justify-content: center;
+  color: #f4f4f4;
+  text-align: center;
+}
+.container-title {
+  width: 100%;
+}
+.container-author {
+  width: 100%;
+}
+.container-author {
+  width: 100%;
+}
+
+.title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.25px;
+  margin-bottom: 0px;
+  
+  /* Grå */
+  
+  color: #F4F4F4;
+}
+.author {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  /* identical to box height, or 26px */
+  
+  text-align: center;
+  letter-spacing: 0.005em;
+  
+  /* Grå */
+  
+  color: #F4F4F4;
+}
+.chapter {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  /* identical to box height, or 26px */
+  
+  text-align: center;
+  letter-spacing: 0.005em;
+  
+  /* Grå */
+  
+  color: #F4F4F4;
+}
+
+.actions {
+  padding: 10px;
+  background: #3a3a3a;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: white;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 32px;
+  height: 22px;
+}
+.Playlist {
+  display: flex;
+}
+
+.playlist-left {
+  width: 20%;
+
+  padding: 15px;
+}
+
+.playlist-right {
+  width: 20%;
+  padding: 15px;
+}
+
+.playlist-middle {
+  width: 60%;
+
+  padding: 15px;
+  
+}
+
+#playlist-scroll {
+  margin-top: 15px;
+}
+
+.selected #chapter-icon {
+  display: inline-block;
+  font-size: 30px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: rgb(173, 172, 172);
+}
+
+.songContainer {
+  cursor: pointer;
+  user-select: none;
+}
+
+.pltext {
+  padding: 5px;
+}
+
+.loi {
+  margin: 1px;
+  list-style: none;
+  padding: 1px;
+  font-size: 20px;
+}
+
+.loi li {
+  padding: 4px 0;
+  font-weight: 450;
+  display: inline;
+}
+
+.songlist {
+  overflow-y: scroll;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+}
+
+.song {
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  font-size: 30px;
+  color: black;
+}
+
+#chapter-icon {
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+  position: relative;
+}
+
+.controls-container {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  margin-top: 20%;
+
+  justify-content: center;
+  align-items: center;
+  padding-left: 25%;
+}
+
+.Controls-body {
+  width: 100%;
+  color: white;
+}
+
+.controls-left {
+  width: 30%;
+  float: left;
+  padding: 5px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-middle {
+  width: 40%;
+  float: left;
+  padding: 5px;
+}
+
+.controls-right {
+  width: 30%;
+  float: left;
+  padding: 15px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-progres {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.progressBar {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.vlme {
+  display: flex;
+  align-content: center;
+  overflow: hidden;
+  width: 25px;
+  transition: all 500ms;
+  position: absolute;
+  left: 10%;
+  float: left;
+}
+
+.vlme:hover {
+  width: 100%;
+}
+
+.volum {
+  padding: 10px;
+}
+
+#volBar {
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  background: transparent;
+}
+
+#volBar::-moz-range-thumb {
+  height: 10px;
+  width: 3px;
+  background: #2a6586;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.musicControls {
+  width: 100px;
+  position: absolute;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.musicControls span {
+  cursor: pointer;
+}
+
+.musicControls span:hover {
+  color: #2a6586;
+}
+
+.play {
+  position: relative;
+  z-index: 3;
+  font-size: 66px;
+}
+
+.play:active {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.play:hover {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+.prev {
+  border-radius: 10px 0 0px 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  margin-right: -5px;
+  z-index: 1;
+  font-size: 25px;
+}
+
+.left-side {
+  width: 25%;
+  float: left;
+  padding: 15px;
+}
+
+.next {
+  border-radius: 0px 10px 10px 0px;
+  padding-right: 15px;
+  padding-left: 10px;
+  margin-left: -5px;
+  z-index: 1;
+  font-size: 25px;
+}
+
+.right-side {
+  width: 25%;
+  float: left;
+  padding: 15px;
+}
+
+.progressb {
+  width: 100%;
+
+  margin-top: 15px;
+}
+
+#prgbar {
+  background: transparent;
+  width: 350px;
+}
+
+.plsoptions {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.plsoptions span {
+  cursor: pointer;
+}
+
+.plsoptions span:hover {
+  color: #2a6586;
+}
+
+.plsoptions span.active {
+  color: rgb(32, 77, 104);
+}
+
+.currentT,
+.totalT {
+  width: 35px;
+}
+
+/* BREAK LINE */
+
+
+.player-playlist {
+  height: 80px;
+}
+.swiper-wrapper {
+  width: 70%;
+  margin-left: 100px;
+}
+.swiper-button-next {
+  width: 15%;
+}
+.swiper-button-prev {
+  width: 15%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} 
+
+

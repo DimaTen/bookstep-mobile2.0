@@ -1,5 +1,12 @@
 import React from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Profile() {
-  return <div>Profile goes here</div>;
+  const { currentUser } = useAuth();
+  return (
+    <div>
+      <p>Email:</p>
+      {JSON.stringify(currentUser.email)}
+    </div>
+  );
 }

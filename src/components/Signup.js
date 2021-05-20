@@ -28,7 +28,7 @@ export default function Signup({ setTrigger }) {
       setError('');
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      setError('Nytt konto skapat!');
+      history.push('/ReadyToUseBookstep');
       handleClose();
     } catch {
       setError('Failed to create account');
