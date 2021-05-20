@@ -24,11 +24,9 @@ export default function Header({ isOpen, setTrigger }) {
 
   return (
     <Header className="header">
-      <Link to="/">
-        <div className="hamburger">
-          <i className="ri-menu-fill ri-3x" onClick={handleClick} />
-        </div>
-      </Link>
+      <div className="hamburger">
+        <i className="ri-menu-fill ri-3x" onClick={handleClick} />
+      </div>
       <Link to="/">
         <img src="Booksteplogo.svg" alt="bookstep logo" />
       </Link>

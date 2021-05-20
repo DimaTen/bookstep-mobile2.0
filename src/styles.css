@@ -12,6 +12,10 @@ ul {
   list-style-type: none;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 .sidemenu {
   display: flex;
   background-color: #f0b5a4;
