@@ -66,7 +66,7 @@ export default function Sidemenu({ setTrigger }) {
               <Popup trigger={openLogin}>
                 <Login setTrigger={setOpenLogin} setTrigger={setTrigger} />
               </Popup>
-              <Link to="/Player" onClick={handleClose}>
+              <Link to="/AudioPlayer" onClick={handleClose}>
                 <li>
                   <h2>Prova Bookstep</h2>
                 </li>
