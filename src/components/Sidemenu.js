@@ -41,11 +41,7 @@ export default function Sidemenu({ setTrigger }) {
             <img src="Blogo.svg" alt="B logo" />
             <img src="phone.svg" alt="phone" className="phone" />
             <img src="login.svg" alt="login symbol" />
-            {!currentUser ? (
-              <img src="TryBooksteplogo.svg" alt="try bookstep logo" />
-            ) : (
-              ''
-            )}
+            <img src="TryBooksteplogo.svg" alt="try bookstep logo" />
           </div>
           <div className="listItem-text">
             <ul>
@@ -70,15 +66,11 @@ export default function Sidemenu({ setTrigger }) {
               <Popup trigger={openLogin}>
                 <Login setTrigger={setOpenLogin} setTrigger={setTrigger} />
               </Popup>
-              {!currentUser ? (
-                <Link to="/AudioPlayer" onClick={handleClose}>
-                  <li>
-                    <h2>Prova Bookstep</h2>
-                  </li>
-                </Link>
-              ) : (
-                ''
-              )}
+              <Link to="/AudioPlayer" onClick={handleClose}>
+                <li>
+                  <h2>Prova Bookstep</h2>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
