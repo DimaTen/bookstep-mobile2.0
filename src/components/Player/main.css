@@ -30,6 +30,8 @@
   z-index: -1;
 }
 
+
+
 .hide {
   display: none;
 }
@@ -41,16 +43,17 @@
 }
 
 .graphics img {
-  width: auto;
+  width: 100%;
+  height: 400px;
+  
 }
 
 .graphics {
   border: 5px solid;
   -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
   filter: blur(10px) contrast(120%) brightness(80%);
+
 }
-
-
 
 
 .chapterName {
@@ -240,7 +243,7 @@
   width: 30%;
   float: left;
   padding: 5px;
-  padding-top: 25px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,7 +259,7 @@
   width: 30%;
   float: left;
   padding: 15px;
-  padding-top: 25px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
