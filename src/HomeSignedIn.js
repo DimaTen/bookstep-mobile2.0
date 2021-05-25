@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import Popup from './components/Popup';
-import ReadyToUseBookstep from './ReadyToUseBookstep';
-import { useAuth } from './contexts/AuthContext';
 
 const HomeSignedIn = () => {
-  const { currentUser } = useAuth();
-
   return (
     <>
       <img src="walking.svg" />
