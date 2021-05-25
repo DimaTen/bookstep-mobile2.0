@@ -1,13 +1,16 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import './styles.css';
-import React, { useState } from 'react';
-import Sidemenu from './components/Sidemenu';
-import Popup from './components/Popup';
-import Player from './components/Player';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { AuthProvider } from './contexts/AuthContext';
-import MainContent from './components/MainContent';
+import { BrowserRouter as Router } from "react-router-dom";
+import "./styles.css";
+import React, { useState } from "react";
+import Sidemenu from "./components/Sidemenu";
+import Popup from "./components/Popup";
+import Player from "./components/Player";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { AuthProvider } from "./contexts/AuthContext";
+import MainContent from "./components/MainContent";
+import MediaQuery from "react-responsive";
+import HeaderDesktop from "./components/HeaderDesktop";
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,8 +18,14 @@ const App = () => {
     <Router>
       <AuthProvider>
         <div className="container-fluid">
-          <Header isOpen={isOpen} setTrigger={setIsOpen} />
-          <section className="hider"></section>
+          <MediaQuery query="(max-device-width: 1024px)">
+            <Header isOpen={isOpen} setTrigger={setIsOpen} />
+            <section className="hider"></section>
+          </MediaQuery>
+          <MediaQuery query="(min-device-width: 1024px)">
+            <HeaderDesktop/>
+           
+          </MediaQuery>
           <MainContent setTrigger={setIsOpen} />
           <Popup trigger={isOpen}>
             <Sidemenu setTrigger={setIsOpen} />
