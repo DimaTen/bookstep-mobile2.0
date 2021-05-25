@@ -3,6 +3,7 @@ import Button from './components/Button';
 import Slideshow from './components/Slideshow';
 import Popup from './components/Popup';
 import Signup from './components/Signup';
+import MediaQuery from 'react-responsive';
 
 export default function HomeNotSignedIn() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

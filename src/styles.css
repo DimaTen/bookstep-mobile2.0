@@ -113,6 +113,70 @@ a:visited {
   background-color: rgb(255, 255, 255);
 }
 
+@media only screen and (min-width: 480px) {
+  .slideshow {
+    margin-left: 11%;
+  }
+}
+
+@media only screen and (min-width: 580px) {
+  .slideshow {
+    margin-left: 16%;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .slideshow {
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .slideshow {
+    margin-left: 23%;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .slideshow {
+    margin-left: 26%;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .slideshow {
+    margin-left: 29%;
+  }
+}
+
+Footer.footerDesktop {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.footer-links a {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  font-weight: 300;
+  color: #f4f4f4;
+  margin-right: 50px;
+}
+
+.sm-logos {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-around;
+  width: 15%;
+}
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
@@ -131,6 +195,7 @@ a:visited {
   position: absolute;
   top: 80%;
   left: 30%;
+  right: 30%;
 }
 
 .slideshowDot {
@@ -180,23 +245,22 @@ h4 {
 }
 
 .book-wrapper {
-  background-color: #fafafa;
   display: flex;
-  flex-direction: column;
+  background-color: #fafafa;
   justify-content: center;
-  align-content: center;
-  justify-content: space-around;
-  height: 83vh;
+  align-items: center;
+  flex-direction: column;
+  height: 81vh;
 }
 
 .bookContent-wrapper {
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
-  height: 90%;
+  height: 95%;
+  width: 93%;
 }
 
 .bookList-wrapper {
@@ -281,4 +345,14 @@ h4 {
 }
 .a:hover Link:hover {
   cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns Button {
+  min-width: 130px;
+  height: 4vh;
 }

@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { AuthProvider } from './contexts/AuthContext';
 import MainContent from './components/MainContent';
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
 
