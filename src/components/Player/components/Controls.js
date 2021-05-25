@@ -95,18 +95,18 @@ function Controls() {
             </div>
 
             <div class="controls-progres">
-              <div className="vlme">
-
-              <span className="volum"><i className="fas fa-volume-down"></i></span>
-              <input value={Math.round(statevolum * 100)} type="range" name="volBar" id="volBar" onChange={(e) => handleVolume(e.target.value / 100)} />
-
-              </div>
-              <span className="currentT">{fmtMSS(currentTime)}</span>
-              <input
-                  onChange={handleProgress}
-                  value={dur ? (currentTime * 100) / dur : 0}
-                  type="range" name="progresBar" id="prgbar" />
+              {/* <div className="vlme">
+                <span className="volum"><i className="fas fa-volume-down"></i></span>
+                <input value={Math.round(statevolum * 100)} type="range" name="volBar" id="volBar" onChange={(e) => handleVolume(e.target.value / 100)} />
+              </div> */}
+              <div className="progressBar">
+                <span className="currentT">{fmtMSS(currentTime)}</span>
+                <input
+                    onChange={handleProgress}
+                    value={dur ? (currentTime * 100) / dur : 0}
+                    type="range" name="progresBar" id="prgbar" />
                 <span className="totalT">{fmtMSS(dur)}</span>
+              </div>
 
             </div>
 
