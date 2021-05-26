@@ -5,6 +5,7 @@ import Playlist from './components/playlist/Playlist';
 import Actions from './components/playlist/Actions';
 import Controls from './components/Controls';
 import PlayerState from './context/PlayerState';
+
 import './input.css';
 import './main.css';
 function AudioPlayer() {
@@ -19,7 +20,7 @@ function AudioPlayer() {
             <Controls />
           </div>
           <div class="player-banner">
-            <h1>this is Banner</h1>
+          <h2>Banner</h2>
           </div>
           <div class="player-playlist">
             <Playlist />

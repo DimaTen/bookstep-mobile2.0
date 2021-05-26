@@ -9,6 +9,8 @@ import ReadyToUseBookstep from '../ReadyToUseBookstep';
 import Popup from './Popup';
 import Signup from './Signup';
 import { useState } from 'react';
+import ReadMoreMobyD from './ReadMoreMobyD';
+
 
 export default function MainContent() {
   const { currentUser } = useAuth();
@@ -17,6 +19,7 @@ export default function MainContent() {
   if (currentUser) {
     return (
       <>
+        <Route path="/ReadMoreMobyD" exact component={ReadMoreMobyD} />
         <Route path="/AudioPlayer" exact component={AudioPlayer} />
         <Route path="/Profile" exact component={Profile} />
         <Route path="/Books" exact component={Books} />

@@ -85,8 +85,8 @@ function Controls() {
             </div>
             <div class="controls-middle">
               <span className="play" onClick={() => { togglePlaying(); toggleAudio(); }}>
-                <span className={!playing ? '' : 'hide'}><i className="fas fa-play"></i></span>
-                <span className={!playing ? 'hide' : ''}><i className="fas fa-pause"></i></span>
+                <span className={!playing ? '' : 'hide'}><img className="Playbutton" src="./icons/Play.png"></img></span>
+                <span className={!playing ? 'hide' : ''}><img src="./icons/Pause.png"></img></span>
               </span>
             </div>
             <div class="controls-right">
