@@ -1,14 +1,13 @@
-import React from "react";
-import Header from "./components/graphics/Header";
-import Graphics from "./components/graphics/Graphics";
-import Playlist from "./components/playlist/Playlist";
-import Actions from "./components/playlist/Actions";
-import Controls from "./components/Controls";
-import PlayerState from "./context/PlayerState";
-import Banner from "./components/playlist/Banner";
-import  "./input.css";
-import  "./main.css";
+import React from 'react';
+import Header from './components/graphics/Header';
+import Graphics from './components/graphics/Graphics';
+import Playlist from './components/playlist/Playlist';
+import Actions from './components/playlist/Actions';
+import Controls from './components/Controls';
+import PlayerState from './context/PlayerState';
 
+import './input.css';
+import './main.css';
 function AudioPlayer() {
   return (
     <PlayerState>
@@ -21,7 +20,7 @@ function AudioPlayer() {
             <Controls />
           </div>
           <div class="player-banner">
-            <Banner />
+          <h2>Banner</h2>
           </div>
           <div class="player-playlist">
             <Playlist />
