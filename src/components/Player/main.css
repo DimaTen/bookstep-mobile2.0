@@ -3,6 +3,7 @@
 }
 
 .Player-box {
+
   text-align: center;
   width: auto;
   height: 67vh;
@@ -12,21 +13,25 @@
   justify-content: center;
   width: auto;
   height: auto;
+  
 }
 .player-header {
   width: auto;
   text-align: center;
   padding: 15px;
+  padding-top: 70px;
 }
 .player-controls-middle {
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  
 }
 
 .Player-background {
   position: absolute;
-  top: 15%;
+  top: 5%;
   z-index: -1;
 }
 
@@ -44,11 +49,14 @@
 
 .graphics img {
   width: 100%;
-  height: 400px;
+  height: 700px;
+
+ 
   
 }
 
 .graphics {
+  
   border: 5px solid;
   -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
   filter: blur(10px) contrast(120%) brightness(80%);
@@ -83,6 +91,7 @@
   text-align: center;
   letter-spacing: 0.25px;
   margin-bottom: 0px;
+
   
   /* Grå */
   
@@ -142,6 +151,7 @@
 }
 .Playlist {
   display: flex;
+  margin-top: 45px;
 }
 
 .playlist-left {
@@ -157,6 +167,7 @@
 
 .playlist-middle {
   width: 60%;
+  margin-left: -10px;
 
   padding: 15px;
   
@@ -244,13 +255,14 @@
   float: left;
   padding: 5px;
   padding-top: 20px;
+  margin-left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .controls-middle {
-  width: 40%;
+  width: 30%;
   float: left;
   padding: 5px;
 }
@@ -258,7 +270,7 @@
 .controls-right {
   width: 30%;
   float: left;
-  padding: 15px;
+  padding: 5px;
   padding-top: 20px;
   display: flex;
   align-items: center;
@@ -282,6 +294,14 @@
   align-items: center;
   padding-left: 20%;
   padding-right: 20%;
+}
+.currentT, .totalT {
+  width: 35px;
+  margin-left: 10px;
+}
+.currentT, .totalT {
+  width: 35px;
+  margin-right: 10px;
 }
 
 .vlme {
@@ -417,6 +437,7 @@
 
 .player-playlist {
   height: 80px;
+  float: left;
 }
 .swiper-wrapper {
   width: 70%;
