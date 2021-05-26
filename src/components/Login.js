@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import Signup from './Signup';
 import { useHistory, Link } from 'react-router-dom';
 import Button from './Button';
+import Popup from './Popup';
 
 export default function Login({ setTrigger }) {
   const emailRef = useRef();
@@ -13,6 +14,7 @@ export default function Login({ setTrigger }) {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [openReady, setOpenReady] = useState(false);
+  const [switchWindow, setSwitchWindow] = useState(false);
 
   const handleClose = () => {
     setTrigger(false);
@@ -34,6 +36,10 @@ export default function Login({ setTrigger }) {
     }
     setLoading(false);
   }
+
+  const handleSwitchWindow = () => {
+    setSwitchWindow(true);
+  };
 
   return (
     <div className="login-window-wrapper">
@@ -76,11 +82,17 @@ export default function Login({ setTrigger }) {
         </form>
         <p style={{ borderBottom: '1px solid #AAAAAA' }}>Glömt lösenord?</p>
         <h6>Har du inget konto?</h6>
+        <Popup trigger={switchWindow}>
+          <Signup setTrigger={setSwitchWindow} />
+        </Popup>
         <Button
-          text="Skapa ett konto gratis"
           color="white"
           bgColor="#545454"
-        ></Button>
+          onClick={handleClose}
+          onClick={handleSwitchWindow}
+        >
+          Skapa ett konto gratis
+        </Button>
       </div>
     </div>
   );

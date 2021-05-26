@@ -94,58 +94,61 @@ a:visited {
   cursor: pointer;
 }
 
+.hider {
+  height: 55px;
+  width: 100%;
+}
+
 /* SlideShow */
+.slide {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
 
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;
 }
 
-.hider {
-  height: 55px;
-  width: 100%;
-}
-
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
-  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 760px) {
   .slideshow {
-    margin-left: 11%;
+    width: 375px;
   }
 }
 
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 761px) {
   .slideshow {
-    margin-left: 16%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
   }
-}
 
-@media only screen and (min-width: 680px) {
-  .slideshow {
-    margin-left: 20%;
+  .slideshowSlider {
+    height: 700px;
+    white-space: nowrap;
+    transition: ease 1000ms;
   }
-}
 
-@media only screen and (min-width: 780px) {
-  .slideshow {
-    margin-left: 23%;
+  .heroWrapperDesktop {
+    display: flex;
+    justify-content: center;
   }
-}
 
-@media only screen and (min-width: 880px) {
-  .slideshow {
-    margin-left: 26%;
-  }
-}
-
-@media only screen and (min-width: 980px) {
-  .slideshow {
-    margin-left: 29%;
+  .heroDesktop {
+    max-width: 760px;
+    height: 100%;
+    object-fit: cover;
+    max-height: 994px;
   }
 }
 
@@ -177,23 +180,13 @@ Footer.footerDesktop {
   justify-content: space-around;
   width: 15%;
 }
-.slideshowSlider {
-  white-space: nowrap;
-  transition: ease 1000ms;
-}
-
-.slide {
-  display: inline-block;
-  overflow: hidden;
-  width: 100%;
-}
 
 /* Buttons */
 
 .slideshowDots {
   text-align: center;
   position: absolute;
-  top: 80%;
+  top: 42%;
   left: 30%;
   right: 30%;
 }
@@ -230,13 +223,25 @@ h4 {
 .heading {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  height: 45vh;
 }
+
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: stretch;
+  height: 80vh;
+}
+/* 
+.heading h4 {
+  margin-top: 5%;
+} */
 
 .login-window-wrapper {
   display: flex;
-  width: 60%;
+  padding: 5vw;
   height: auto;
   background-color: white;
   align-items: center;
@@ -355,4 +360,11 @@ h4 {
 .btns Button {
   min-width: 130px;
   height: 4vh;
+}
+
+.homeWrapperSigned {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

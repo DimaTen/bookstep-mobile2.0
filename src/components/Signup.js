@@ -39,7 +39,6 @@ export default function Signup({ setTrigger }) {
     <div class="login-window-wrapper">
       <div class="login-window">
         {error && <Alert variant="danger">{error}</Alert>}
-        <h3>Skapa konto</h3>
         <div className="close-button">
           <Link to="/">
             <i
@@ -49,6 +48,8 @@ export default function Signup({ setTrigger }) {
             ></i>
           </Link>
         </div>
+        <h3>Skapa konto</h3>
+
         <form onSubmit={handleSubmit}>
           <h6>Epost</h6>
           <input
@@ -75,18 +76,20 @@ export default function Signup({ setTrigger }) {
             required
           ></input>
 
-          <button
+          <Button
             type="submit"
             disabled={loading}
             bgColor="#F0B5A4"
             onClick={handleSubmit}
           >
             Fortsätt
-          </button>
+          </Button>
         </form>
         <p style={{ borderBottom: '1px solid #AAAAAA' }}>Glömt lösenord?</p>
         <h6>Har du redan ett konto?</h6>
-        <Button text="Logga in" color="white" bgColor="#545454"></Button>
+        <Button color="white" bgColor="#545454">
+          Logga in
+        </Button>
       </div>
     </div>
   );

@@ -37,6 +37,14 @@ export default function Footer() {
       justify-content: space-between;
       width: 80%;
     }
+
+    .footer-links {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 149%;
+    }
   `;
 
   const classNames = ['ri-headphone-fill', 'ri-file-mark-fill', 'ri-run-fill'];
@@ -44,7 +52,7 @@ export default function Footer() {
 
   return (
     <>
-      <MediaQuery query="(max-device-width: 992px)">
+      <MediaQuery query="(max-device-width: 760px)">
         <Footer>
           <div className="footer-icons">
             {classNames.map((_, idx) => (
@@ -65,7 +73,7 @@ export default function Footer() {
           </div>
         </Footer>
       </MediaQuery>
-      <MediaQuery query="(min-device-width: 993px)">
+      <MediaQuery query="(min-device-width: 761px)">
         <Footer className="footerDesktop">
           <div className="footer-links">
             <a href="">Hem</a>

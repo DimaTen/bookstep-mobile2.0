@@ -37,6 +37,7 @@ export default function MainContent() {
             <Signup setTrigger={setButtonPopup} />
           </Popup>
         )}
+
         <Route path="/AudioPlayer" exact component={AudioPlayer} />
         <Route path="/Profile" exact component={Profile} />
         <Route path="/Books" exact component={Books} />

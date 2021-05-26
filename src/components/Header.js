@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MediaQuery from 'react-responsive';
 import Button from './Button';
 import { useAuth } from '../contexts/AuthContext';
+import Popup from './Popup';
+import Login from './Login';
 
 export default function Header({ isOpen, setTrigger }) {
-  const { currentUser } = useAuth();
+  const [openLogin, setOpenLogin] = useState(false);
+  const { currentUser, logout } = useAuth();
   const Header = styled.header`
     position: fixed;
     top: 0;
@@ -31,12 +34,22 @@ export default function Header({ isOpen, setTrigger }) {
     .btns {
       display: flex;
       margin: 3%;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 149%;
     }
 
     .links {
       display: flex;
       justify-content: space-between;
       width: 30%;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 149%;
+      letter-spacing: 0.005em;
     }
 
     img {
@@ -44,13 +57,24 @@ export default function Header({ isOpen, setTrigger }) {
     }
   `;
 
+  async function handleLogout() {
+    try {
+      await logout();
+    } catch {}
+  }
+
+  const handleLogin = () => {
+    if (currentUser) handleLogout();
+    else setOpenLogin(true);
+  };
+
   const handleClick = () => {
     isOpen ? setTrigger(false) : setTrigger(true);
   };
 
   return (
     <>
-      <MediaQuery query="(max-device-width: 992px)">
+      <MediaQuery query="(max-device-width: 760px)">
         <Header className="header">
           <section className="hamburger">
             <i className="ri-menu-fill ri-3x" onClick={handleClick} />
@@ -65,7 +89,7 @@ export default function Header({ isOpen, setTrigger }) {
           </section>
         </Header>
       </MediaQuery>
-      <MediaQuery query="(min-device-width: 993px)">
+      <MediaQuery query="(min-device-width: 761px)">
         <Header className="header">
           <Link to="/">
             <img src="Booksteplogo.svg" alt="bookstep logo" />
@@ -85,12 +109,15 @@ export default function Header({ isOpen, setTrigger }) {
             </Link>
           </section>
           <section className="btns">
-            <Button className="left">
+            <Button className="left" onClick={handleLogin}>
               {currentUser ? 'Logga ut' : 'Logga in'}
             </Button>
             <Button id="right" color="white" bgColor="#545454">
-              Prova Bookstep
+              Prova
             </Button>
+            <Popup trigger={openLogin}>
+              <Login setTrigger={setOpenLogin} />
+            </Popup>
           </section>
         </Header>
       </MediaQuery>
