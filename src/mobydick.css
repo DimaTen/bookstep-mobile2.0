@@ -3,20 +3,28 @@
   box-sizing: border-box;
 }
 .moby-wrapper {
-  border: 2px solid darkgreen;
+  /* border: 2px solid darkgreen; */
 }
 
 .content-moby {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  /* filter: blur(8px); */
+  background: linear-gradient(180deg, rgb(19, 19, 56), 61.98%,
+  #F4F4F4 96.28%), rgb(17, 17, 41); 
 }
-.outer-moby {
+
+/* .outer-moby {
   background-image: url('MobyDick-bookcover.svg');
   background-size: cover;
   position: absolute;
-}
+} */
 .bookcover-as-background {
   position: absolute;
   z-index: -1;
@@ -28,7 +36,6 @@
   background-size: cover;
   position: relative;
   background-position: center;
-
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 61.98%,
@@ -73,12 +80,17 @@ h5 {
   justify-content: space-around;
   height: 55px;
 }
-
-p {
-  border: 3px solid green;
-  background-color: yellow;
-  text-align: center;
+.button-position{
+  display:flex;
+  justify-content: center;
+  justify-content: center;
   margin: 10%;
+}
+.moby-text {
+  /* border: 1px solid green; */
+  /* background-color: yellow; */
+  text-align: center;
+  margin: 7%;
 }
 .icons-div {
   display: flex;

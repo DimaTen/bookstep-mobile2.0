@@ -22,6 +22,7 @@ const App = () => {
             <Sidemenu setTrigger={setIsOpen} />
           </Popup>
           <Footer />
+          <section className="hider"></section>
         </div>
       </AuthProvider>
     </Router>
