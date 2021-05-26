@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 export default function Footer() {
   const [index, setIndex] = useState(3);
@@ -16,8 +17,8 @@ export default function Footer() {
     right: 0;
     width: 100%;
     display: flex;
+    background-color: #fafafa;
     flex-direction: row;
-    background-color: #f4f4f4;
     align-items: center;
     justify-content: space-between;
     justify-content: space-around;
@@ -42,24 +43,52 @@ export default function Footer() {
   const links = ['/AudioPlayer', '/Books', '/Profile'];
 
   return (
-    <Footer>
-      <div className="footer-icons">
-        {classNames.map((_, idx) => (
-          <Link to={`${links[idx]}`}>
-            <div>
-              <i
-                key={idx}
-                className={`${classNames[idx]} ri-3x${
-                  index === idx ? ' active' : ' inActive'
-                }`}
-                onClick={() => {
-                  setIndex(idx);
-                }}
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
-    </Footer>
+    <>
+      <MediaQuery query="(max-device-width: 992px)">
+        <Footer>
+          <div className="footer-icons">
+            {classNames.map((_, idx) => (
+              <Link to={`${links[idx]}`}>
+                <div>
+                  <i
+                    key={idx}
+                    className={`${classNames[idx]} ri-3x${
+                      index === idx ? ' active' : ' inActive'
+                    }`}
+                    onClick={() => {
+                      setIndex(idx);
+                    }}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Footer>
+      </MediaQuery>
+      <MediaQuery query="(min-device-width: 993px)">
+        <Footer className="footerDesktop">
+          <div className="footer-links">
+            <a href="">Hem</a>
+            <a href="">Böcker</a>
+            <a href="">Om oss</a>
+            <a href="">Kontakt</a>
+            <a href="">Skapa konto gratis</a>
+          </div>
+          <div className="sm-logos">
+            <a href="">
+              <div>
+                <img src="./fb-logo.svg" alt="Facebook logo" />
+              </div>
+            </a>
+            <div></div>
+            <a href="">
+              <div>
+                <img src="./instagram-logo.svg" alt="Instagram logo" />
+              </div>
+            </a>
+          </div>
+        </Footer>
+      </MediaQuery>
+    </>
   );
 }

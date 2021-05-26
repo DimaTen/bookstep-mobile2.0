@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export default function Button({ children, color, bgColor, onClick, type }) {
   const Button = styled.button`
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: min(2em, 15%);
+    padding-right: min(2em, 15%);
     border: 1px solid #545454;
     border-radius: 15px;
     margin: 1vw;

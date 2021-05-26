@@ -35,7 +35,6 @@ export default function Signup({ setTrigger }) {
     }
     setLoading(false);
   }
-
   return (
     <div class="login-window-wrapper">
       <div class="login-window">
@@ -50,7 +49,7 @@ export default function Signup({ setTrigger }) {
             ></i>
           </Link>
         </div>
-        <div className="credentials">
+        <form onSubmit={handleSubmit}>
           <h6>Epost</h6>
           <input
             name="email"
@@ -75,10 +74,16 @@ export default function Signup({ setTrigger }) {
             ref={passwordRef}
             required
           ></input>
-        </div>
-        <Button disabled={loading} bgColor="#F0B5A4" onClick={handleSubmit}>
-          Fortsätt
-        </Button>
+
+          <button
+            type="submit"
+            disabled={loading}
+            bgColor="#F0B5A4"
+            onClick={handleSubmit}
+          >
+            Fortsätt
+          </button>
+        </form>
         <p style={{ borderBottom: '1px solid #AAAAAA' }}>Glömt lösenord?</p>
         <h6>Har du redan ett konto?</h6>
         <Button text="Logga in" color="white" bgColor="#545454"></Button>
