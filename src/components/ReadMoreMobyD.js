@@ -24,31 +24,30 @@ const ReadMoreMobyD = () => {
             <img src={alarmIcon} alt="icon alarm clock" />
           </div>
         </div>
-          </div>
-          <Link to="/AudioPlayer">
-            <div className="button-position">
-              <img src={playnow} alt="spela nu-knapp" />              
-              {/* <Button color="white" bgColor="black">
+      </div>
+      <Link to="/AudioPlayer">
+        <div className="button-position">
+          <img src={playnow} alt="spela nu-knapp" />
+          {/* <Button color="white" bgColor="black">
                 Spela nu 
               </Button> */}
-            <div/>
-            </div>
-            </Link>
-          <div/>
-        <div/>
-         <div className="moby-text">
-          Romanen handlar om kapten Ahab, som blivit besatt av att jaga en vit
-          kaskelot kallad Moby Dick. Kaptenen saknar ett ben, som han fick
-          avslitet tidigare i sitt liv av samma val. Ahab är kapten ombord på
-          Pequod, ett valfångstfartyg från ön Nantucket. En av huvudpersonerna
-          är Ismael som man får följa i början av boken.
-          </div>
-    <div className="moby-text">
-      <Button color="black" bgColor="white">
-        Skapa stegmål
-      </Button>
-
-    </div>
+          <div />
+        </div>
+      </Link>
+      <div />
+      <div />
+      <div className="moby-text">
+        Romanen handlar om kapten Ahab, som blivit besatt av att jaga en vit
+        kaskelot kallad Moby Dick. Kaptenen saknar ett ben, som han fick
+        avslitet tidigare i sitt liv av samma val. Ahab är kapten ombord på
+        Pequod, ett valfångstfartyg från ön Nantucket. En av huvudpersonerna är
+        Ismael som man får följa i början av boken.
+      </div>
+      <div className="moby-text">
+        <Button color="black" bgColor="white">
+          Skapa stegmål
+        </Button>
+      </div>
     </div>
   );
 };

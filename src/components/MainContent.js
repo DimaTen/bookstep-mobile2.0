@@ -10,7 +10,6 @@ import Popup from './Popup';
 import Login from './Login';
 import { useState } from 'react';
 import ReadMoreMobyD from './ReadMoreMobyD';
-import Signup from './Signup';
 
 export default function MainContent() {
   const { currentUser } = useAuth();
