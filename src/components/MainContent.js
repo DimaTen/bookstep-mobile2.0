@@ -41,7 +41,7 @@ export default function MainContent() {
 
         {!currentUser && (
           <Popup trigger={true}>
-            <Signup setTrigger={setButtonPopup} />
+            <Login setTrigger={setButtonPopup} />
           </Popup>
         )}
         <Route to="/" component={notAuthorized} />

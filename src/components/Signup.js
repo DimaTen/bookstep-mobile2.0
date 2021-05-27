@@ -42,9 +42,9 @@ export default function Signup({ setTrigger }) {
         <div className="close-button">
           <Link to="/">
             <i
+              onClick={handleClose}
               className="ri-close-line ri-3x"
               style={{ marginLeft: '55%' }}
-              onClick={handleClose}
             ></i>
           </Link>
         </div>

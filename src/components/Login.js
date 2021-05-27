@@ -47,11 +47,13 @@ export default function Login({ setTrigger }) {
         {error && <Alert variant="danger">{error}</Alert>}
         <form onSubmit={handleSubmit}>
           <div className="close-button">
-            <i
-              className="ri-close-line ri-3x"
-              style={{ marginLeft: '55%' }}
-              onClick={handleClose}
-            ></i>
+            <Link to="/">
+              <i
+                className="ri-close-line ri-3x"
+                style={{ marginLeft: '55%' }}
+                onClick={handleClose}
+              ></i>
+            </Link>
           </div>
           <div className="credentials">
             <h6>Epost</h6>
