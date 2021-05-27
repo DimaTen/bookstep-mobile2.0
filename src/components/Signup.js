@@ -49,7 +49,6 @@ export default function Signup({ setTrigger }) {
           </Link>
         </div>
         <h3>Skapa konto</h3>
-
         <form onSubmit={handleSubmit}>
           <h6>Epost</h6>
           <input
@@ -75,7 +74,6 @@ export default function Signup({ setTrigger }) {
             ref={passwordRef}
             required
           ></input>
-
           <Button
             type="submit"
             disabled={loading}

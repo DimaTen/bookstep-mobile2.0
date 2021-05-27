@@ -99,6 +99,11 @@ a:visited {
   width: 100%;
 }
 
+.hiderBottom {
+  height: 63px;
+  width: 100%;
+}
+
 /* SlideShow */
 .slide {
   display: inline-block;
@@ -120,6 +125,7 @@ a:visited {
 @media only screen and (max-width: 760px) {
   .slideshow {
     width: 375px;
+    background-color: #f4f4f4;
   }
 }
 
@@ -131,6 +137,7 @@ a:visited {
     background-color: rgb(255, 255, 255);
     position: relative;
     width: 100%;
+    background-color: #f4f4f4;
   }
 
   .slideshowSlider {
@@ -209,6 +216,7 @@ Footer.footerDesktop {
   height: 100%;
   width: 100%;
   padding: 0;
+  background-color: white;
 }
 
 h4 {
@@ -242,6 +250,7 @@ h6 {
   flex-direction: column;
   justify-self: stretch;
   height: 80vh;
+  background-color: white;
 }
 /* 
 .heading h4 {

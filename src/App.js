@@ -22,10 +22,10 @@ const App = () => {
             <Sidemenu setTrigger={setIsOpen} />
           </Popup>
           <Footer />
+          <section className="hiderBottom"></section>
         </div>
       </AuthProvider>
     </Router>
-
   );
 };
 
