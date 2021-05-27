@@ -25,6 +25,7 @@ const App = () => {
         </div>
       </AuthProvider>
     </Router>
+
   );
 };
 
