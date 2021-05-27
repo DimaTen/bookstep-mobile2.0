@@ -45,25 +45,6 @@ function Playlist() {
           })()
   }
 
-  const swiperRef = useRef(null);
-
-  let appendNumber = 600;
-  let prependNumber = 1;
-
-  const prepend = () => {
-    swiperRef.current.swiper.virtual.prependSlide([
-      'Slide ' + (--prependNumber),
-      'Slide ' + (--prependNumber)
-    ]);
-  }
-
-  const append = () => {
-    swiperRef.current.swiper.virtual.appendSlide('Slide ' + (++appendNumber));
-  }
-
-  const slideTo = (index) => {
-    swiperRef.current.slideTo(index - 1, 0);
-  }
 
 
 
@@ -87,6 +68,7 @@ function Playlist() {
                   }
                   key={i}
                   onClick={() => {
+                    
                     checkSteps(i);
                   }}
                 >
