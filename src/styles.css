@@ -15,9 +15,6 @@ ul {
 i:hover {
   cursor: pointer;
 }
-.Player-box {
-  background-color: grey;
-}
 .sidemenu {
   display: flex;
   background-color: #f0b5a4;

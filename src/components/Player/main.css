@@ -2,9 +2,7 @@
   box-sizing: border-box;
 }
 
-
 .Player-box {
-
   text-align: center;
   width: auto;
   height: 67vh;
@@ -14,7 +12,7 @@
   justify-content: center;
   width: auto;
   height: auto;
-  
+  z-index: 3;
 }
 .player-header {
   width: auto;
@@ -27,16 +25,13 @@
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 30px;
-  
 }
 
 .Player-background {
   position: absolute;
   top: 5%;
-  z-index: -1;
+  z-index: 0;
 }
-
-
 
 .hide {
   display: none;
@@ -49,22 +44,15 @@
 }
 
 .graphics img {
-
   width: 100%;
   height: 700px;
-  transform: scale(1.1)
- 
-  
 }
 
 .graphics {
-  
   border: 1px solid;
-  -webkit-filter: blur(5px); 
+  -webkit-filter: blur(5px);
   filter: blur(5px) contrast(120%) brightness(80%);
-
 }
-
 
 .chapterName {
   display: inline-block;
@@ -94,10 +82,9 @@
   letter-spacing: 0.25px;
   margin-bottom: 0px;
 
-  
   /* Grå */
-  
-  color: #F4F4F4;
+
+  color: #f4f4f4;
 }
 .author {
   font-family: Rubik;
@@ -108,13 +95,13 @@
   margin-top: 0px;
   margin-bottom: 5px;
   /* identical to box height, or 26px */
-  
+
   text-align: center;
   letter-spacing: 0.005em;
-  
+
   /* Grå */
-  
-  color: #F4F4F4;
+
+  color: #f4f4f4;
 }
 .chapter {
   font-family: Rubik;
@@ -125,13 +112,13 @@
   margin-top: 0px;
   margin-bottom: 0px;
   /* identical to box height, or 26px */
-  
+
   text-align: center;
   letter-spacing: 0.005em;
-  
+
   /* Grå */
-  
-  color: #F4F4F4;
+
+  color: #f4f4f4;
 }
 
 .actions {
@@ -158,7 +145,6 @@
   align-items: center;
   width: 100%;
   margin-top: 40px;
-  
 }
 
 .playlist-middle {
@@ -169,11 +155,9 @@
   font-size: 10px;
 }
 
-
 #playlist-scroll {
   margin-top: 15px;
 }
-
 
 .selected #chapter-icon {
   display: inline-block;
@@ -191,7 +175,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  
+
   background-color: white;
   position: relative;
 }
@@ -218,9 +202,7 @@
   display: inline;
 }
 
-
 .songlist {
-
   height: 50px;
   width: 100%;
   align-items: center;
@@ -233,8 +215,6 @@
   font-size: 20px;
   color: black;
 }
-
-
 
 .controls-container {
   position: absolute;
@@ -307,11 +287,13 @@ span.play {
   padding-left: 20%;
   padding-right: 20%;
 }
-.currentT, .totalT {
+.currentT,
+.totalT {
   width: 35px;
   margin-left: 10px;
 }
-.currentT, .totalT {
+.currentT,
+.totalT {
   width: 35px;
   margin-right: 10px;
 }
@@ -446,7 +428,6 @@ span.play {
 
 /* BREAK LINE */
 
-
 #root {
   height: 100%;
 }
@@ -466,27 +447,36 @@ body {
 }
 
 .swiper-container {
-  width: 100%;
+  width: 95%;
   height: 100%;
   position: relative;
 }
 
 .swiper-button-next {
- color:rgba(0, 0, 0, 0.4);
- border: 1px solid;
- border-color: transparent;
- background-color: none;
- right: 0;
+  color: rgba(0, 0, 0, 0.4);
+  border: 1px solid;
+  border-color: transparent;
+  background-color: none;
+  right: 0;
 }
 
 .swiper-button-prev {
-  color:rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
   border: 1px solid;
   border-color: transparent;
   background-color: none;
   left: 0;
- }
+}
 
+@media only screen and (max-width: 760px) {
+  .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    display: none;
+  }
+}
 
 .swiper-wrapper {
   position: relative;
@@ -497,12 +487,10 @@ body {
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  
 }
 .swiper-slides {
   width: 80%;
 }
-
 
 .swiper-slide {
   height: 50px;
@@ -531,17 +519,10 @@ body {
   height: 50%;
   object-fit: cover;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   bottom: -50px;
   left: 0;
   width: 100%;
 }
-
-:root {
-  --swiper-theme-color: #F4F4F4;
-  padding-left: 10px;
-  padding-right: 10px; 
-}
-
-
-

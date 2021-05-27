@@ -22,6 +22,7 @@ export default function Header({ isOpen, setTrigger }) {
     align-items: center;
     justify-content: space-between;
     height: 55px;
+    z-index: 10;
 
     .hamburger {
       margin-left: 5%;

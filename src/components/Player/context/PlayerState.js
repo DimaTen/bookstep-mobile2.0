@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import playerContext from './playerContext';
 import playerReducer from './playerReducer';
 import { songsArr } from './songs';
+import { useAuth } from '../../../contexts/AuthContext';
 
 import {
   SET_CURRENT_SONG,
@@ -11,6 +12,7 @@ import {
 } from './types';
 
 const PlayerState = (props) => {
+  const { currentUser } = useAuth();
   const initialState = {
     currentSong: 0,
     songs: songsArr,
@@ -37,10 +39,14 @@ const PlayerState = (props) => {
   };
   // Next song
   const nextSong = () => {
-    if (state.currentSong === state.songs.length - 1) {
-      SetCurrent(0);
+    if (!currentUser) {
+      alert('Du behöver logga in för att lyssna på fler kapitel');
     } else {
-      SetCurrent(state.currentSong + 1);
+      if (state.currentSong === state.songs.length - 1) {
+        SetCurrent(0);
+      } else {
+        SetCurrent(state.currentSong + 1);
+      }
     }
   };
 
