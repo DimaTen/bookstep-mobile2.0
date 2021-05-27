@@ -24,7 +24,6 @@ function AudioPlayer() {
           <div class="player-playlist">
           
             <Playlist />
-
           </div>
         </div>
 

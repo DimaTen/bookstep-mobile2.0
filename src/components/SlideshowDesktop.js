@@ -1,14 +1,12 @@
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import HeroBanner1 from '../components/Herobanners/HeroBanner1';
-import HeroBanner2 from '../components/Herobanners/HeroBanner2';
-import HeroBanner3 from '../components/Herobanners/HeroBanner3';
-import HeroBanner4 from '../components/Herobanners/HeroBanner4';
+import Home_Slide1 from './HomeSlides/Home_Slide1';
+import Home_Slide2 from './HomeSlides/Home_Slide2';
 
-const slides = [HeroBanner1, HeroBanner2, HeroBanner3, HeroBanner4];
+const slides = [Home_Slide1, Home_Slide1];
 const delay = 3500;
 
-export default function Slideshow() {
+export default function SlideshowDesktop() {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const HomeSignedIn = () => {
   return (
-    <>
+    <div className="homeWrapperSigned">
       <img src="walking.svg" />
       <div className="heading">
         <h4 style={{ marginTop: '1em' }}>
@@ -10,7 +10,7 @@ const HomeSignedIn = () => {
           bok och börja räkna stegen. Häftigt att ha dig med!
         </h4>
       </div>
-    </>
+    </div>
   );
 };
 

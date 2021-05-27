@@ -7,8 +7,9 @@ import { Route, Switch } from 'react-router-dom';
 import HomeNotSignedIn from '../HomeNotSignedIn';
 import ReadyToUseBookstep from '../ReadyToUseBookstep';
 import Popup from './Popup';
-import Signup from './Signup';
+import Login from './Login';
 import { useState } from 'react';
+import ReadMoreMobyD from './ReadMoreMobyD';
 
 export default function MainContent() {
   const { currentUser } = useAuth();
@@ -25,27 +26,24 @@ export default function MainContent() {
           exact
           component={ReadyToUseBookstep}
         />
+        <Route path="/ReadMoreMobyD" exact component={ReadMoreMobyD} />
         <Route path="/" exact component={HomeSignedIn} />
       </>
     );
   } else {
     return (
       <Switch>
+        <Route path="/AudioPlayer" exact component={AudioPlayer} />
+        <Route path="/ReadMoreMobyD" exact component={ReadMoreMobyD} />
+        <Route path="/Books" exact component={Books} />
         <Route exact path="/" component={HomeNotSignedIn} />
+
         {!currentUser && (
           <Popup trigger={true}>
-            <Signup setTrigger={setButtonPopup} />
+            <Login setTrigger={setButtonPopup} />
           </Popup>
         )}
-        <Route path="/AudioPlayer" exact component={AudioPlayer} />
-        <Route path="/Profile" exact component={Profile} />
-        <Route path="/Books" exact component={Books} />
-        <Route
-          path="/ReadyToUseBookstep"
-          exact
-          component={ReadyToUseBookstep}
-        />
-        {/* <Route to="/" component={notAuthorized} /> */}
+        <Route to="/" component={notAuthorized} />
       </Switch>
     );
   }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Card } from 'react-bootstrap';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 export default function Books() {
   const url = 'books.json';
@@ -34,23 +35,32 @@ export default function Books() {
                 <Card.Img variant="top" src="bookCoverCake.svg" />
                 <Card.Body>
                   <Card.Title>Boktitel</Card.Title>
+
                   <Button>Klicka</Button>
                 </Card.Body>
               </Card>
             </div>
             <div class="cards-right">
               <Card>
-                <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                <Link to="/ReadMoreMobyD">
+                  <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                </Link>
                 <Card.Body>
                   <Card.Title>Boktitel</Card.Title>
-                  <Button>Klicka</Button>
+                  <Link to="/ReadMoreMobyD">
+                    <Button>Klicka</Button>
+                  </Link>
                 </Card.Body>
               </Card>
               <Card>
-                <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                <Link to="/ReadMoreMobyD">
+                  <Card.Img variant="top" src="bookCoverMoby-Dick.svg" />
+                </Link>
                 <Card.Body>
                   <Card.Title>Boktitel</Card.Title>
-                  <Button>Klicka</Button>
+                  <Link to="/ReadMoreMobyD">
+                    <Button>Klicka</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
