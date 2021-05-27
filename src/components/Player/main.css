@@ -269,6 +269,10 @@ span.play {
   justify-content: center;
 }
 
+#prgbar {
+  margin-left: 10px;
+}
+
 .controls-progres {
   float: left;
   width: 100%;
@@ -284,17 +288,17 @@ span.play {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 .currentT,
 .totalT {
-  width: 35px;
+  width: 45px;
   margin-left: 10px;
 }
 .currentT,
 .totalT {
-  width: 35px;
+  width: 45px;
   margin-right: 10px;
 }
 

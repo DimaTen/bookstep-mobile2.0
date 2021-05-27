@@ -89,9 +89,6 @@ function Playlist() {
           </Swiper>
         </div>
       </div>
-
-      <div class="swiper-button-prev-unique"></div>
-      <div class="swiper-button-next-unique"></div>
     </div>
   );
 }

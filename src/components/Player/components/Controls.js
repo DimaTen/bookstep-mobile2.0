@@ -103,7 +103,7 @@ function Controls() {
               <img className="Playbutton" src="./icons/Play.png"></img>
             </span>
             <span className={!playing ? 'hide' : ''}>
-              <img src="./icons/Pause.png"></img>
+              <img src="./icons/Pause.svg"></img>
             </span>
           </span>
         </div>
