@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 .Player-box {
 
   text-align: center;
@@ -48,18 +49,19 @@
 }
 
 .graphics img {
+
   width: 100%;
   height: 700px;
-
+  
  
   
 }
 
 .graphics {
   
-  border: 5px solid;
-  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
-  filter: blur(10px) contrast(120%) brightness(80%);
+  border: 1px solid;
+  -webkit-filter: blur(5px); 
+  filter: blur(5px) contrast(120%) brightness(80%);
 
 }
 
@@ -155,34 +157,43 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 40px;
   
 }
-.playlist-left {
-  float: left;
-  width: 15%;
-}
+
 .playlist-middle {
   float: left;
-  width: 70%;
-  height: 100px;
+
+  width: 100%;
+  height: 90px;
   font-size: 10px;
 }
-.playlist-right {
-  float: right;
-  width: 15%;
-}
+
 
 #playlist-scroll {
   margin-top: 15px;
 }
 
+
 .selected #chapter-icon {
   display: inline-block;
   font-size: 30px;
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   background-color: rgb(173, 172, 172);
+}
+#chapter-icon {
+  display: inline-block;
+  margin-top: 35px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  
+  background-color: white;
+  position: relative;
 }
 
 .songContainer {
@@ -207,9 +218,10 @@
   display: inline;
 }
 
+
 .songlist {
 
-  height: 80px;
+  height: 50px;
   width: 100%;
   align-items: center;
 }
@@ -217,31 +229,22 @@
 .song {
   display: flex;
   justify-content: center;
-  padding-top: 18px;
-  font-size: 30px;
+  padding-top: 10px;
+  font-size: 20px;
   color: black;
 }
 
-#chapter-icon {
-  display: inline-block;
-  margin-bottom: 30px;
-  margin-left: 15px;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  background-color: white;
-  position: relative;
-}
+
 
 .controls-container {
   position: absolute;
   z-index: 1;
-  width: 80%;
+  width: 100%;
   margin-top: 20%;
 
   justify-content: center;
   align-items: center;
-  padding-left: 25%;
+  padding-left: 40%;
 }
 span.play {
   font-size: 0px;
@@ -259,14 +262,14 @@ span.play {
   float: left;
   padding: 5px;
   padding-top: 20px;
-  margin-left: 15px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .controls-middle {
-  width: 30%;
+  width: 40%;
   float: left;
   margin-bottom: 10px;
 }
@@ -360,7 +363,7 @@ span.play {
 }
 
 .musicControls span:hover {
-  color: #2a6586;
+  color: #edf1f3;
 }
 
 .play {
@@ -429,11 +432,11 @@ span.play {
 }
 
 .plsoptions span:hover {
-  color: #2a6586;
+  color: #f3f4f5;
 }
 
 .plsoptions span.active {
-  color: rgb(32, 77, 104);
+  color: rgb(242, 245, 247);
 }
 
 .currentT,
@@ -456,23 +459,55 @@ body {
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   color: #000;
   margin: 0;
   padding: 0;
 }
 
 .swiper-container {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
+
+.swiper-button-next {
+ color:rgba(0, 0, 0, 0.4);
+ border: 1px solid;
+ border-color: transparent;
+ background-color: none;
+ right: 0;
+}
+
+.swiper-button-prev {
+  color:rgba(0, 0, 0, 0.4);
+  border: 1px solid;
+  border-color: transparent;
+  background-color: none;
+  left: 0;
+ }
+
+
+.swiper-wrapper {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  padding: 0;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
   
+}
+.swiper-slides {
+  width: 80%;
+}
 
 
 .swiper-slide {
-height: 50px;
+  height: 50px;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   background: none;
 
   /* Center slide text vertically */
@@ -492,8 +527,21 @@ height: 50px;
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+}
+
+:root {
+  --swiper-theme-color: #F4F4F4;
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+
 
